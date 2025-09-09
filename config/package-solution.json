@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "kao-intranet-client-side-solution",
+    "id": "53087286-1cad-401e-9ef7-1f032e45bf8e",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.14.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "kao-intranet description"
+      },
+      "longDescription": {
+        "default": "kao-intranet description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "kao-intranet Feature",
+        "description": "The feature that activates elements of the kao-intranet solution.",
+        "id": "0fb0f945-6bb9-47f0-8d0d-77f0d78c0dfe",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/kao-intranet.sppkg"
+  }
+}

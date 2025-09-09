@@ -1,0 +1,135 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "announcement-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/announcement/AnnouncementWebPart.js",
+          "manifest": "./src/webparts/announcement/AnnouncementWebPart.manifest.json"
+        }
+      ]
+    },
+    "kao-data-news-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/kaoDataNews/KaoDataNewsWebPart.js",
+          "manifest": "./src/webparts/kaoDataNews/KaoDataNewsWebPart.manifest.json"
+        }
+      ]
+    },
+    "quick-links-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/quickLinks/QuickLinksWebPart.js",
+          "manifest": "./src/webparts/quickLinks/QuickLinksWebPart.manifest.json"
+        }
+      ]
+    },
+    "department-spotlight-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/departmentSpotlight/DepartmentSpotlightWebPart.js",
+          "manifest": "./src/webparts/departmentSpotlight/DepartmentSpotlightWebPart.manifest.json"
+        }
+      ]
+    },
+    "external-news-feed-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/externalNewsFeed/ExternalNewsFeedWebPart.js",
+          "manifest": "./src/webparts/externalNewsFeed/ExternalNewsFeedWebPart.manifest.json"
+        }
+      ]
+    },
+    "kao-events-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/kaoEvents/KaoEventsWebPart.js",
+          "manifest": "./src/webparts/kaoEvents/KaoEventsWebPart.manifest.json"
+        }
+      ]
+    },
+    "kudos-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/kudos/KudosWebPart.js",
+          "manifest": "./src/webparts/kudos/KudosWebPart.manifest.json"
+        }
+      ]
+    },
+    "latest-training-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/latestTraining/LatestTrainingWebPart.js",
+          "manifest": "./src/webparts/latestTraining/LatestTrainingWebPart.manifest.json"
+        }
+      ]
+    },
+    "industry-events-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/industryEvents/IndustryEventsWebPart.js",
+          "manifest": "./src/webparts/industryEvents/IndustryEventsWebPart.manifest.json"
+        }
+      ]
+    },
+    "workwear-shop-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/workwearShop/WorkwearShopWebPart.js",
+          "manifest": "./src/webparts/workwearShop/WorkwearShopWebPart.manifest.json"
+        }
+      ]
+    },
+    "linked-in-feed-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/linkedInFeed/LinkedInFeedWebPart.js",
+          "manifest": "./src/webparts/linkedInFeed/LinkedInFeedWebPart.manifest.json"
+        }
+      ]
+    },
+    "find-us-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/findUs/FindUsWebPart.js",
+          "manifest": "./src/webparts/findUs/FindUsWebPart.manifest.json"
+        }
+      ]
+    },
+    "your-assistance-programme-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/yourAssistanceProgramme/YourAssistanceProgrammeWebPart.js",
+          "manifest": "./src/webparts/yourAssistanceProgramme/YourAssistanceProgrammeWebPart.manifest.json"
+        }
+      ]
+    },
+    "departmental-updates-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/departmentalUpdates/DepartmentalUpdatesWebPart.js",
+          "manifest": "./src/webparts/departmentalUpdates/DepartmentalUpdatesWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "AnnouncementWebPartStrings": "lib/webparts/announcement/loc/{locale}.js",
+    "KaoDataNewsWebPartStrings": "lib/webparts/kaoDataNews/loc/{locale}.js",
+    "QuickLinksWebPartStrings": "lib/webparts/quickLinks/loc/{locale}.js",
+    "DepartmentSpotlightWebPartStrings": "lib/webparts/departmentSpotlight/loc/{locale}.js",
+    "ExternalNewsFeedWebPartStrings": "lib/webparts/externalNewsFeed/loc/{locale}.js",
+    "KaoEventsWebPartStrings": "lib/webparts/kaoEvents/loc/{locale}.js",
+    "KudosWebPartStrings": "lib/webparts/kudos/loc/{locale}.js",
+    "LatestTrainingWebPartStrings": "lib/webparts/latestTraining/loc/{locale}.js",
+    "IndustryEventsWebPartStrings": "lib/webparts/industryEvents/loc/{locale}.js",
+    "WorkwearShopWebPartStrings": "lib/webparts/workwearShop/loc/{locale}.js",
+    "LinkedInFeedWebPartStrings": "lib/webparts/linkedInFeed/loc/{locale}.js",
+    "FindUsWebPartStrings": "lib/webparts/findUs/loc/{locale}.js",
+    "YourAssistanceProgrammeWebPartStrings": "lib/webparts/yourAssistanceProgramme/loc/{locale}.js",
+    "DepartmentalUpdatesWebPartStrings": "lib/webparts/departmentalUpdates/loc/{locale}.js"
+  }
+}
