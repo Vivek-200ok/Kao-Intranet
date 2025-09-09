@@ -1,0 +1,40 @@
+.hero {
+    position: relative;
+    background-image: url('../real_estate16.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    color: white;
+}
+  
+.overlay {
+    position: absolute;
+    bottom: 0;
+    width: 94%;
+    /* background: rgba(0, 128, 0, .7); */
+    backdrop-filter: blur(10px);
+    padding: 18px;
+}
+  
+.overlay h1 {
+    margin: 0 0 5px;
+    font-size: 25px;
+    margin-left: 22px;
+}
+  
+.overlay p {
+    margin: 0 0 0 22px;
+    font-size: 13px;
+}
+  
+.Announcement-Header {
+    width: 100%;
+}
+  
+
+/* --------------------------------------------------------- */
+
+#sp-appBar {
+    display: none !important;
+  }
+  

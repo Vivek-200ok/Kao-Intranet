@@ -2,8 +2,26 @@ import * as React from 'react';
 import styles from './Announcement.module.scss';
 import { IAnnouncementProps } from './IAnnouncementProps';
 import { escape } from '@microsoft/sp-lodash-subset';
+import { sp } from '@pnp/sp/presets/all';
 
-export default class Announcement extends React.Component<IAnnouncementProps, {}> {
+export interface IAnnouncementState {
+
+}
+
+require('../assets/css/style.css');
+
+export default class Announcement extends React.Component<IAnnouncementProps, IAnnouncementState> {
+
+  constructor(props: IAnnouncementProps, state: IAnnouncementState) {
+    super(props);
+
+    this.state = {
+      
+    };
+
+  }
+
+
   public render(): React.ReactElement<IAnnouncementProps> {
     const {
       description,
@@ -14,28 +32,14 @@ export default class Announcement extends React.Component<IAnnouncementProps, {}
     } = this.props;
 
     return (
-      <section className={`${styles.announcement} ${hasTeamsContext ? styles.teams : ''}`}>
-        <div className={styles.welcome}>
-          <img alt="" src={isDarkTheme ? require('../assets/welcome-dark.png') : require('../assets/welcome-light.png')} className={styles.welcomeImage} />
-          <h2>Well done, {escape(userDisplayName)}!</h2>
-          <div>{environmentMessage}</div>
-          <div>Web part property value: <strong>{escape(description)}</strong></div>
-        </div>
-        <div>
-          <h3>Welcome to SharePoint Framework!</h3>
-          <p>
-            The SharePoint Framework (SPFx) is a extensibility model for Microsoft Viva, Microsoft Teams and SharePoint. It's the easiest way to extend Microsoft 365 with automatic Single Sign On, automatic hosting and industry standard tooling.
-          </p>
-          <h4>Learn more about SPFx development:</h4>
-          <ul className={styles.links}>
-            <li><a href="https://aka.ms/spfx" target="_blank">SharePoint Framework Overview</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-graph" target="_blank">Use Microsoft Graph in your solution</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-teams" target="_blank">Build for Microsoft Teams using SharePoint Framework</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-viva" target="_blank">Build for Microsoft Viva Connections using SharePoint Framework</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-store" target="_blank">Publish SharePoint Framework applications to the marketplace</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-api" target="_blank">SharePoint Framework API reference</a></li>
-            <li><a href="https://aka.ms/m365pnp" target="_blank">Microsoft 365 Developer Community</a></li>
-          </ul>
+      <section id="announcement">
+        <div className='Announcement-Header'>
+          <div className="hero">
+            <div className="overlay">
+              <h1>BACK TO BUSINESS</h1>
+              <p>Aut Magni Rem Quia Aliquam Molestiae. Impedit Consequatur Eaque Facere Iure Rerum Nes Ciunt Voluptatem Et. Delectus Eum Vitae Architecto. Dolores Nostrum Enim Et Tenetur</p>
+            </div>
+          </div>
         </div>
       </section>
     );
