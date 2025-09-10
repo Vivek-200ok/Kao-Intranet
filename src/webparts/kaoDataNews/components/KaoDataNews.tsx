@@ -2,8 +2,53 @@ import * as React from 'react';
 import styles from './KaoDataNews.module.scss';
 import { IKaoDataNewsProps } from './IKaoDataNewsProps';
 import { escape } from '@microsoft/sp-lodash-subset';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-export default class KaoDataNews extends React.Component<IKaoDataNewsProps, {}> {
+export interface IKaoDataNewsState {
+}
+
+require('../assets/css/style.css');
+
+const newsItems = [
+  {
+    title: "News Title Goes Here",
+    description: "Some description goes here. Some description goes here.",
+    date: "Sep 05, 2025",
+    imageUrl: "https://th.bing.com/th/id/R.39b4b6d36149500a1c2320255e2efcdb?rik=L1gNNJVF0TzL1w&riu=http%3a%2f%2f1.bp.blogspot.com%2f-Y0k3cYNTuG0%2fUqK_cexVySI%2fAAAAAAAAAoY%2frKNhU3432Zc%2fs640%2fprofessionals-traveler.jpg&ehk=L%2bSq05caLu4KczRuXdz7dG59R3oBV1%2bDqFCUi2D%2fzPM%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1"
+  },
+  {
+    title: "News Title Goes Here",
+    description: "Some description goes here. Some description goes here.",
+    date: "Sep 05, 2025",
+    imageUrl: "https://cdn.gobankingrates.com/wp-content/uploads/2021/01/savings-iStock-1177056123-e1609885817397.jpg"
+  },
+  {
+    title: "News Title Goes Here",
+    description: "Some description goes here. Some description goes here.",
+    date: "Sep 05, 2025",
+    imageUrl: "https://smartway2.com/wp-content/uploads/2021/04/shutterstock_708649936-980x622.jpg"
+  },
+  {
+    title: "News Title Goes Here",
+    description: "Some description goes here. Some description goes here.",
+    date: "Sep 05, 2025",
+    imageUrl: "https://img.freepik.com/premium-photo/marketer-analityc-manager-team-dressed-suits-working-with-paper-charts-laptops-white-office-interior_506452-3517.jpg"
+  }
+];
+
+export default class KaoDataNews extends React.Component<IKaoDataNewsProps, IKaoDataNewsState> {
+
+  constructor(props: IKaoDataNewsProps, state: IKaoDataNewsState) {
+    super(props);
+
+    this.state = {
+
+    };
+
+  }
+
   public render(): React.ReactElement<IKaoDataNewsProps> {
     const {
       description,
@@ -13,30 +58,40 @@ export default class KaoDataNews extends React.Component<IKaoDataNewsProps, {}> 
       userDisplayName
     } = this.props;
 
+    var settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplaySpeed: 2000,
+      autoplay: true,
+      cssEase: "linear",
+      // nextArrow: <SampleNextArrow />,
+      // prevArrow: <SamplePrevArrow />
+    };
+
     return (
-      <section className={`${styles.kaoDataNews} ${hasTeamsContext ? styles.teams : ''}`}>
-        <div className={styles.welcome}>
-          <img alt="" src={isDarkTheme ? require('../assets/welcome-dark.png') : require('../assets/welcome-light.png')} className={styles.welcomeImage} />
-          <h2>Well done, {escape(userDisplayName)}!</h2>
-          <div>{environmentMessage}</div>
-          <div>Web part property value: <strong>{escape(description)}</strong></div>
+      <section id="kaoDataNews">
+
+        <div className='KaoDataNews-Header'>
+
+          <h2 className="newsHeader">Kao Data News</h2>
+          <div className="featuredNews">Featured News</div>
+          
+            {newsItems.map((item, index) => (
+              <div key={index} className="newsItem">
+                <img src={item.imageUrl} alt="News" className="newsImage" />
+                <div className="newsContent">
+                  <div className="newsTitle">{item.title}</div>
+                  <div className="newsDescription">{item.description}</div>
+                  <div className="newsDate">{item.date}</div>
+                </div>
+              </div>
+            ))}
+          
         </div>
-        <div>
-          <h3>Welcome to SharePoint Framework!</h3>
-          <p>
-            The SharePoint Framework (SPFx) is a extensibility model for Microsoft Viva, Microsoft Teams and SharePoint. It's the easiest way to extend Microsoft 365 with automatic Single Sign On, automatic hosting and industry standard tooling.
-          </p>
-          <h4>Learn more about SPFx development:</h4>
-          <ul className={styles.links}>
-            <li><a href="https://aka.ms/spfx" target="_blank">SharePoint Framework Overview</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-graph" target="_blank">Use Microsoft Graph in your solution</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-teams" target="_blank">Build for Microsoft Teams using SharePoint Framework</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-viva" target="_blank">Build for Microsoft Viva Connections using SharePoint Framework</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-store" target="_blank">Publish SharePoint Framework applications to the marketplace</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-api" target="_blank">SharePoint Framework API reference</a></li>
-            <li><a href="https://aka.ms/m365pnp" target="_blank">Microsoft 365 Developer Community</a></li>
-          </ul>
-        </div>
+
       </section>
     );
   }

@@ -31,10 +31,17 @@
     width: 100%;
 }
   
+.slick-dots li {
+    display: none;
+}
 
 /* --------------------------------------------------------- */
 
 #sp-appBar {
     display: none !important;
-  }
+}
+
+#CommentsWrapper {
+    display: none !important;
+}
   
