@@ -4,4 +4,5 @@ export interface IQuickLinksProps {
   environmentMessage: string;
   hasTeamsContext: boolean;
   userDisplayName: string;
+  context : any;
 }

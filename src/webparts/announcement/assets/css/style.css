@@ -10,7 +10,7 @@
 .overlay {
     position: absolute;
     bottom: 0;
-    width: 94%;
+    width: 97%;
     /* background: rgba(0, 128, 0, .7); */
     backdrop-filter: blur(10px);
     padding: 18px;

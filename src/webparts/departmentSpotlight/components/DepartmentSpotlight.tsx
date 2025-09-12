@@ -2,8 +2,26 @@ import * as React from 'react';
 import styles from './DepartmentSpotlight.module.scss';
 import { IDepartmentSpotlightProps } from './IDepartmentSpotlightProps';
 import { escape } from '@microsoft/sp-lodash-subset';
+import { sp } from '@pnp/sp/presets/all';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-export default class DepartmentSpotlight extends React.Component<IDepartmentSpotlightProps, {}> {
+export interface IDepartmentSpotlightState {
+}
+
+require('../assets/css/style.css');
+
+export default class DepartmentSpotlight extends React.Component<IDepartmentSpotlightProps, IDepartmentSpotlightState> {
+
+  constructor(props: IDepartmentSpotlightProps, state: IDepartmentSpotlightState) {
+    super(props);
+
+    this.state = {
+
+    };
+
+  }
+
   public render(): React.ReactElement<IDepartmentSpotlightProps> {
     const {
       description,
@@ -14,29 +32,48 @@ export default class DepartmentSpotlight extends React.Component<IDepartmentSpot
     } = this.props;
 
     return (
-      <section className={`${styles.departmentSpotlight} ${hasTeamsContext ? styles.teams : ''}`}>
-        <div className={styles.welcome}>
-          <img alt="" src={isDarkTheme ? require('../assets/welcome-dark.png') : require('../assets/welcome-light.png')} className={styles.welcomeImage} />
-          <h2>Well done, {escape(userDisplayName)}!</h2>
-          <div>{environmentMessage}</div>
-          <div>Web part property value: <strong>{escape(description)}</strong></div>
+      <section id="departmentSpotlight">
+
+        <div className="department-Spotlight-container"> 
+          <div className="department-Spotlight-header">Departmental Spotlight</div>
+          <span className='department-Span'></span>
+
+          <div className='department-scrollable'>
+
+            <div className="update-card">
+              <div className="update-image">
+                <img src="https://tse1.mm.bing.net/th/id/OIP.jX4_EDkm0Ou5LqwCblpOGQHaE7?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Server Room" />
+              </div>
+              <div className="update-content">
+                <div className="date">Sunday, Sep 4, 12:00 PM</div>
+                <h2>Update Title</h2>
+                <p>Quis autem similique dolorem ut sit odit perspi ciatis. Et perferendis est quia magni et
+                  sapie nte neces sitatibus. Id est eius expedita quasi voluptas similique ut sit odit
+                  perspiciatis. Et perfes wrendis est quia. Quis autem similique dolorem ut sit odit
+                  perspi ciatis. Et perferendis est quia magni et sapie nte neces sitatibus. Id est eius
+                  expedita quasi voluptas similique ut sit odit perspiciatis. Et perfes wrendis est quia.</p>
+              </div>
+            </div>
+
+            <div className="update-card">
+              <div className="update-image">
+                <img src="https://tse1.mm.bing.net/th/id/OIP.jX4_EDkm0Ou5LqwCblpOGQHaE7?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Server Room" />
+              </div>
+              <div className="update-content">
+                <div className="date">Sunday, Sep 4, 12:00 PM</div>
+                <h2>Update Title</h2>
+                <p>Quis autem similique dolorem ut sit odit perspi ciatis. Et perferendis est quia magni et
+                  sapie nte neces sitatibus. Id est eius expedita quasi voluptas similique ut sit odit
+                  perspiciatis. Et perfes wrendis est quia. Quis autem similique dolorem ut sit odit
+                  perspi ciatis. Et perferendis est quia magni et sapie nte neces sitatibus. Id est eius
+                  expedita quasi voluptas similique ut sit odit perspiciatis. Et perfes wrendis est quia.</p>
+              </div>
+            </div>
+
+          </div>
+
         </div>
-        <div>
-          <h3>Welcome to SharePoint Framework!</h3>
-          <p>
-            The SharePoint Framework (SPFx) is a extensibility model for Microsoft Viva, Microsoft Teams and SharePoint. It's the easiest way to extend Microsoft 365 with automatic Single Sign On, automatic hosting and industry standard tooling.
-          </p>
-          <h4>Learn more about SPFx development:</h4>
-          <ul className={styles.links}>
-            <li><a href="https://aka.ms/spfx" target="_blank">SharePoint Framework Overview</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-graph" target="_blank">Use Microsoft Graph in your solution</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-teams" target="_blank">Build for Microsoft Teams using SharePoint Framework</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-viva" target="_blank">Build for Microsoft Viva Connections using SharePoint Framework</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-store" target="_blank">Publish SharePoint Framework applications to the marketplace</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-api" target="_blank">SharePoint Framework API reference</a></li>
-            <li><a href="https://aka.ms/m365pnp" target="_blank">Microsoft 365 Developer Community</a></li>
-          </ul>
-        </div>
+        
       </section>
     );
   }

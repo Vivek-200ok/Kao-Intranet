@@ -1,0 +1,72 @@
+.quick-links-container {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+}
+
+.quick-links-header {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 7px 11px;
+    font-size: 15px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.Quicks-Span{
+    height: 3px;
+    width: 100%;
+    display: block;
+    background-color: #4caf50;
+    margin-bottom: 10px;
+}
+
+.link-item {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    margin-top: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    text-decoration: none;
+    color: #333;
+    height: 62px;
+}
+
+.link-item:hover {
+    background-color: #f0f0f0;
+}
+
+.link-icon {
+    background-color: #4caf50;
+    padding: 17px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.link-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+.link-text {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.scrollable {
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.scrollable::-webkit-scrollbar {
+    width: 7px;
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+    background-color: lightgray;
+    border-radius: 4px;
+}

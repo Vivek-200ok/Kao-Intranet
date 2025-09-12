@@ -4,4 +4,5 @@ export interface IKaoDataNewsProps {
   environmentMessage: string;
   hasTeamsContext: boolean;
   userDisplayName: string;
+  context : any;
 }
