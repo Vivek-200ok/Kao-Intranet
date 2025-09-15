@@ -11,6 +11,7 @@ import { IReadonlyTheme } from '@microsoft/sp-component-base';
 import * as strings from 'KudosWebPartStrings';
 import Kudos from './components/Kudos';
 import { IKudosProps } from './components/IKudosProps';
+import { sp } from '@pnp/sp/presets/all';
 
 export interface IKudosWebPartProps {
   description: string;
@@ -24,6 +25,10 @@ export default class KudosWebPart extends BaseClientSideWebPart<IKudosWebPartPro
   protected onInit(): Promise<void> {
     this._environmentMessage = this._getEnvironmentMessage();
 
+    sp.setup({
+      spfxContext: this.context
+    });
+
     return super.onInit();
   }
 
@@ -35,7 +40,8 @@ export default class KudosWebPart extends BaseClientSideWebPart<IKudosWebPartPro
         isDarkTheme: this._isDarkTheme,
         environmentMessage: this._environmentMessage,
         hasTeamsContext: !!this.context.sdks.microsoftTeams,
-        userDisplayName: this.context.pageContext.user.displayName
+        userDisplayName: this.context.pageContext.user.displayName,
+        context : this.context
       }
     );
 

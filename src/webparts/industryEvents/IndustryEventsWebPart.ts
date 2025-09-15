@@ -11,6 +11,7 @@ import { IReadonlyTheme } from '@microsoft/sp-component-base';
 import * as strings from 'IndustryEventsWebPartStrings';
 import IndustryEvents from './components/IndustryEvents';
 import { IIndustryEventsProps } from './components/IIndustryEventsProps';
+import { sp } from '@pnp/sp/presets/all';
 
 export interface IIndustryEventsWebPartProps {
   description: string;
@@ -24,6 +25,10 @@ export default class IndustryEventsWebPart extends BaseClientSideWebPart<IIndust
   protected onInit(): Promise<void> {
     this._environmentMessage = this._getEnvironmentMessage();
 
+    sp.setup({
+        spfxContext: this.context
+    });
+
     return super.onInit();
   }
 
@@ -35,7 +40,8 @@ export default class IndustryEventsWebPart extends BaseClientSideWebPart<IIndust
         isDarkTheme: this._isDarkTheme,
         environmentMessage: this._environmentMessage,
         hasTeamsContext: !!this.context.sdks.microsoftTeams,
-        userDisplayName: this.context.pageContext.user.displayName
+        userDisplayName: this.context.pageContext.user.displayName,
+        context: this.context
       }
     );
 

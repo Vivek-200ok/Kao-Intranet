@@ -1,0 +1,77 @@
+.latestTraining-container {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    height: 360px;
+}
+
+.latestTraining-header {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 7px 11px;
+    font-size: 15px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.latestTraining-Span {
+    height: 3px;
+    width: 100%;
+    display: block;
+    background-color: #4caf50;
+    margin-bottom: 20px;
+}
+
+.latestTraining-scrollbar{
+    max-height: 291px;
+    overflow-y: auto;
+    padding-right: 20px;
+}
+
+.latestTraining-scrollbar::-webkit-scrollbar {
+    width: 7px;
+}
+
+.latestTraining-scrollbar::-webkit-scrollbar-thumb {
+    background-color: lightgray;
+    border-radius: 4px;
+}
+
+.training-card {
+    display: flex;
+    background-color: #fff;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.training-card img {
+    width: 122px;
+    height: 97px;
+    object-fit: cover;
+}
+
+.training-content {
+    flex: 1;
+    box-shadow: 0px 3px 1px 0px rgba(0, 0, 0, .1);
+}
+
+.training-date {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 4px;
+    margin-left: 16px;
+    margin-top: 4px;
+}
+
+.training-title {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 7px;
+    margin-left: 16px;
+}
+
+.training-description {
+    font-size: 14px;
+    color: #555;
+    margin-left: 16px;
+}

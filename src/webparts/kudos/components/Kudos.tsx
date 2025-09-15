@@ -2,8 +2,27 @@ import * as React from 'react';
 import styles from './Kudos.module.scss';
 import { IKudosProps } from './IKudosProps';
 import { escape } from '@microsoft/sp-lodash-subset';
+import { sp } from '@pnp/sp/presets/all';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-export default class Kudos extends React.Component<IKudosProps, {}> {
+export interface IKudosState {
+}
+
+require('../assets/css/style.css');
+
+export default class Kudos extends React.Component<IKudosProps, IKudosState> {
+
+  constructor(props: IKudosProps, state: IKudosState) {
+    super(props);
+
+    this.state = {
+
+    };
+
+  }
+
   public render(): React.ReactElement<IKudosProps> {
     const {
       description,
@@ -13,30 +32,56 @@ export default class Kudos extends React.Component<IKudosProps, {}> {
       userDisplayName
     } = this.props;
 
+    var settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplaySpeed: 2000,
+      autoplay: true,
+      cssEase: "linear",
+      // nextArrow: <SampleNextArrow />,
+      // prevArrow: <SamplePrevArrow />
+    };
+
     return (
-      <section className={`${styles.kudos} ${hasTeamsContext ? styles.teams : ''}`}>
-        <div className={styles.welcome}>
-          <img alt="" src={isDarkTheme ? require('../assets/welcome-dark.png') : require('../assets/welcome-light.png')} className={styles.welcomeImage} />
-          <h2>Well done, {escape(userDisplayName)}!</h2>
-          <div>{environmentMessage}</div>
-          <div>Web part property value: <strong>{escape(description)}</strong></div>
+      <section id="kudos">
+
+        <div className="kudos-container">
+          <div className="kudos-header">Kudos</div>
+          <span className='kudos-Span'></span>
+
+            <Slider {...settings}>
+
+              <div className="kudos-card">
+                <img src={require("../assets/Images/businessman-profession-3d-model-low-poly-obj.jpg")} alt="Scott Davies" />
+                  <h2>Scott Davies</h2>
+                  <p>
+                    Quis autem similique dolorem ut sit odit perspiciatis. Et perferendis est quia magni et sapiente necessitatibus. Id est eius expedita quasi voluptas similique ut sit odit perspiciatis. Et perferendis wrendis est quia.
+                  </p>
+              </div>
+
+              <div className="kudos-card">
+                <img src={require("../assets/Images/businessman-profession-3d-model-low-poly-obj.jpg")} alt="Scott Davies" />
+                  <h2>Scott Davies</h2>
+                  <p>
+                    Quis autem similique dolorem ut sit odit perspiciatis. Et perferendis est quia magni et sapiente necessitatibus. Id est eius expedita quasi voluptas similique ut sit odit perspiciatis. Et perferendis wrendis est quia.
+                  </p>
+              </div>
+
+              <div className="kudos-card">
+                <img src={require("../assets/Images/businessman-profession-3d-model-low-poly-obj.jpg")} alt="Scott Davies" />
+                  <h2>Scott Davies</h2>
+                  <p>
+                    Quis autem similique dolorem ut sit odit perspiciatis. Et perferendis est quia magni et sapiente necessitatibus. Id est eius expedita quasi voluptas similique ut sit odit perspiciatis. Et perferendis wrendis est quia.
+                  </p>
+              </div>
+
+            </Slider>
+
         </div>
-        <div>
-          <h3>Welcome to SharePoint Framework!</h3>
-          <p>
-            The SharePoint Framework (SPFx) is a extensibility model for Microsoft Viva, Microsoft Teams and SharePoint. It's the easiest way to extend Microsoft 365 with automatic Single Sign On, automatic hosting and industry standard tooling.
-          </p>
-          <h4>Learn more about SPFx development:</h4>
-          <ul className={styles.links}>
-            <li><a href="https://aka.ms/spfx" target="_blank">SharePoint Framework Overview</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-graph" target="_blank">Use Microsoft Graph in your solution</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-teams" target="_blank">Build for Microsoft Teams using SharePoint Framework</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-viva" target="_blank">Build for Microsoft Viva Connections using SharePoint Framework</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-store" target="_blank">Publish SharePoint Framework applications to the marketplace</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-api" target="_blank">SharePoint Framework API reference</a></li>
-            <li><a href="https://aka.ms/m365pnp" target="_blank">Microsoft 365 Developer Community</a></li>
-          </ul>
-        </div>
+       
       </section>
     );
   }

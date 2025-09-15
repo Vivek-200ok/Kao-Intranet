@@ -4,4 +4,5 @@ export interface IKaoEventsProps {
   environmentMessage: string;
   hasTeamsContext: boolean;
   userDisplayName: string;
+  context : any;
 }

@@ -4,4 +4,5 @@ export interface IKudosProps {
   environmentMessage: string;
   hasTeamsContext: boolean;
   userDisplayName: string;
+  context: any;
 }

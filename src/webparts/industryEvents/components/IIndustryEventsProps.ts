@@ -4,4 +4,5 @@ export interface IIndustryEventsProps {
   environmentMessage: string;
   hasTeamsContext: boolean;
   userDisplayName: string;
+  context: any;
 }

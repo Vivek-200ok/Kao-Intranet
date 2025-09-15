@@ -1,0 +1,84 @@
+.Events-container {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    height: 348px;
+}
+
+.Events-header {
+    color: black;
+    font-size: 17px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.Events-Span {
+    height: 2px;
+    width: 27%;
+    display: block;
+    background-color: #4caf50;
+    margin-bottom: 26px;
+    margin-top: 5px;
+}
+
+.event {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.Events-box {
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 10px 0 0px;
+    margin-right: 15px;
+    width: 95%;
+}
+
+.Events-box .day {
+    font-size: 36px;
+    font-weight: 700;
+    padding: 19px 0;
+    display: block;
+}
+
+.Events-box .month {
+    background-color: green;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: 700;
+    display: block;
+    margin-top: 5px;
+    width: 85%;
+}
+
+.event-details {
+    max-width: 600px;
+}
+
+.event-details h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.event-details p {
+    margin: 5px 0 0 0;
+    color: #555;
+    font-size: 13px;
+}
+
+.Events-scrollable {
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.Events-scrollable::-webkit-scrollbar {
+    width: 7px;
+}
+
+.Events-scrollable::-webkit-scrollbar-thumb {
+    background-color: lightgray;
+    border-radius: 4px;
+}
