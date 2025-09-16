@@ -41,6 +41,43 @@ export default class IndustryEvents extends React.Component<IIndustryEventsProps
 
             <div className='industry-scrollbar'>
 
+            <div className="industry-card">
+              <div className="industry-date">
+                <div className="industry-day">15</div>
+                <div className="industry-month">SEPTEMBER</div>
+              </div>
+              <div className="industry-details">
+                <div className="industry-title">Event title</div>
+                <div className="industry-description">Quis autem similique dolorem ut sit odit perspi ciatis. Et perferendis est</div>
+                <div className="partner-name">Partner Name</div>
+              </div>
+            </div>
+
+            <div className="industry-card">
+              <div className="industry-date">
+                <div className="industry-day">15</div>
+                <div className="industry-month">SEPTEMBER</div>
+              </div>
+              <div className="industry-details">
+                <div className="industry-title">Event title</div>
+                <div className="industry-description">Quis autem similique dolorem ut sit odit perspi ciatis. Et perferendis est</div>
+                <div className="partner-name">Partner Name</div>
+              </div>
+            </div>
+
+            <div className="industry-card">
+              <div className="industry-date">
+                <div className="industry-day">15</div>
+                <div className="industry-month">SEPTEMBER</div>
+              </div>
+              <div className="industry-details">
+                <div className="industry-title">Event title</div>
+                <div className="industry-description">Quis autem similique dolorem ut sit odit perspi ciatis. Et perferendis est</div>
+                <div className="partner-name">Partner Name</div>
+              </div>
+            </div>
+
+
             </div>
 
           </div>
