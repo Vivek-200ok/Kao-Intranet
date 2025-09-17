@@ -3,8 +3,6 @@ import styles from './KaoEvents.module.scss';
 import { IKaoEventsProps } from './IKaoEventsProps';
 import { escape } from '@microsoft/sp-lodash-subset';
 import { sp } from '@pnp/sp/presets/all';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 export interface IKaoEventsState {
 }

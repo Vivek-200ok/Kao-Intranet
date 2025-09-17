@@ -11,6 +11,7 @@ import { IReadonlyTheme } from '@microsoft/sp-component-base';
 import * as strings from 'WorkwearShopWebPartStrings';
 import WorkwearShop from './components/WorkwearShop';
 import { IWorkwearShopProps } from './components/IWorkwearShopProps';
+import { sp } from '@pnp/sp/presets/all';
 
 export interface IWorkwearShopWebPartProps {
   description: string;
@@ -24,6 +25,10 @@ export default class WorkwearShopWebPart extends BaseClientSideWebPart<IWorkwear
   protected onInit(): Promise<void> {
     this._environmentMessage = this._getEnvironmentMessage();
 
+    sp.setup({
+      spfxContext: this.context
+    });
+
     return super.onInit();
   }
 
@@ -35,7 +40,8 @@ export default class WorkwearShopWebPart extends BaseClientSideWebPart<IWorkwear
         isDarkTheme: this._isDarkTheme,
         environmentMessage: this._environmentMessage,
         hasTeamsContext: !!this.context.sdks.microsoftTeams,
-        userDisplayName: this.context.pageContext.user.displayName
+        userDisplayName: this.context.pageContext.user.displayName,
+        context : this.context
       }
     );
 

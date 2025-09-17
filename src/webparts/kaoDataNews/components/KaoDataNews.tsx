@@ -3,9 +3,6 @@ import styles from './KaoDataNews.module.scss';
 import { IKaoDataNewsProps } from './IKaoDataNewsProps';
 import { escape } from '@microsoft/sp-lodash-subset';
 import { sp } from '@pnp/sp/presets/all';
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import { Label } from 'office-ui-fabric-react';
 
 export interface IKaoDataNewsState {

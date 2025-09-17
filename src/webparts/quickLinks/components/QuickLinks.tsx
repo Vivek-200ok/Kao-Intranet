@@ -3,9 +3,6 @@ import styles from './QuickLinks.module.scss';
 import { IQuickLinksProps } from './IQuickLinksProps';
 import { escape } from '@microsoft/sp-lodash-subset';
 import { sp } from '@pnp/sp/presets/all';
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 export interface IQuickLinksState {
 }

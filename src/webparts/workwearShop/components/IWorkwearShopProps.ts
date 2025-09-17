@@ -4,4 +4,5 @@ export interface IWorkwearShopProps {
   environmentMessage: string;
   hasTeamsContext: boolean;
   userDisplayName: string;
+  context: any;
 }

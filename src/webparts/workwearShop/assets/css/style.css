@@ -1,0 +1,54 @@
+#workwearShop{
+    position: relative;
+}
+
+.workWear {
+    /* background: linear-gradient(90deg, #0072ff, #00c6ff, #32cd32); */
+    background-image: url('../real_estate16.jpg'); 
+    font-family: Arial, sans-serif;
+    position: relative;
+    background-size: cover;
+    background-position: 50%;
+    color: #fff;
+}
+
+.workWear-overlay {
+    backdrop-filter: blur(10px);
+    padding: 18px;
+    width: 97.3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.workWear-title {
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-left: 22px;
+}
+
+.workWear-description {
+    line-height: 1.5;
+    margin: 0 0 0 22px;
+    font-size: 14px;
+}
+
+.workWear-button {
+    background-color: #fff;
+    color: #32cd32;
+    padding: 14px 70px;
+    border: none;
+    border-radius: 14px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    height: 16px;
+    margin-right: 50px;
+}
+
+.workWear-button:hover {
+    background-color: #f0f0f0;
+}
