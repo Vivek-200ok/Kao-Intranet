@@ -4,4 +4,5 @@ export interface IYourAssistanceProgrammeProps {
   environmentMessage: string;
   hasTeamsContext: boolean;
   userDisplayName: string;
+  context : any;
 }

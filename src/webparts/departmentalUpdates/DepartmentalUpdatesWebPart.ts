@@ -11,9 +11,18 @@ import { IReadonlyTheme } from '@microsoft/sp-component-base';
 import * as strings from 'DepartmentalUpdatesWebPartStrings';
 import DepartmentalUpdates from './components/DepartmentalUpdates';
 import { IDepartmentalUpdatesProps } from './components/IDepartmentalUpdatesProps';
+import { sp } from "@pnp/sp/presets/all";
+// import {
+//   PropertyFieldFilePicker, IFilePickerResult
+// } from "@pnp/spfx-property-controls/lib/PropertyFieldFilePicker";
+
 
 export interface IDepartmentalUpdatesWebPartProps {
+  propertyName: string;
+  backgroundImage: string;
   description: string;
+  source: string;
+  // filePickerResult: IFilePickerResult;
 }
 
 export default class DepartmentalUpdatesWebPart extends BaseClientSideWebPart<IDepartmentalUpdatesWebPartProps> {
@@ -23,6 +32,10 @@ export default class DepartmentalUpdatesWebPart extends BaseClientSideWebPart<ID
 
   protected onInit(): Promise<void> {
     this._environmentMessage = this._getEnvironmentMessage();
+
+    sp.setup({
+      spfxContext: this.context
+    });
 
     return super.onInit();
   }
@@ -35,7 +48,12 @@ export default class DepartmentalUpdatesWebPart extends BaseClientSideWebPart<ID
         isDarkTheme: this._isDarkTheme,
         environmentMessage: this._environmentMessage,
         hasTeamsContext: !!this.context.sdks.microsoftTeams,
-        userDisplayName: this.context.pageContext.user.displayName
+        userDisplayName: this.context.pageContext.user.displayName,
+        context : this.context,
+        propertyName: this.properties.propertyName,
+        // backgroundImage: this.properties.filePickerResult ? this.properties.filePickerResult.fileAbsoluteUrl : null,
+        // source: this.properties.source,
+        // filePickerResult: this.properties.filePickerResult
       }
     );
 

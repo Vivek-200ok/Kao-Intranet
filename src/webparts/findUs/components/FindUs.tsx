@@ -3,7 +3,21 @@ import styles from './FindUs.module.scss';
 import { IFindUsProps } from './IFindUsProps';
 import { escape } from '@microsoft/sp-lodash-subset';
 
-export default class FindUs extends React.Component<IFindUsProps, {}> {
+export interface IFindUsState {
+}
+
+require('../assets/css/style.css');
+
+export default class FindUs extends React.Component<IFindUsProps, IFindUsState> {
+
+  constructor(props: IFindUsProps, state: IFindUsState) {
+      super(props);
+  
+      this.state = {
+      };
+  
+  }
+
   public render(): React.ReactElement<IFindUsProps> {
     const {
       description,
@@ -14,29 +28,23 @@ export default class FindUs extends React.Component<IFindUsProps, {}> {
     } = this.props;
 
     return (
-      <section className={`${styles.findUs} ${hasTeamsContext ? styles.teams : ''}`}>
-        <div className={styles.welcome}>
-          <img alt="" src={isDarkTheme ? require('../assets/welcome-dark.png') : require('../assets/welcome-light.png')} className={styles.welcomeImage} />
-          <h2>Well done, {escape(userDisplayName)}!</h2>
-          <div>{environmentMessage}</div>
-          <div>Web part property value: <strong>{escape(description)}</strong></div>
+      <section id="findUs">
+
+        <div className="findUs-card">
+          <div className='FindUs-Header'>How to find us</div>
+          <span className='findUs-Span'></span>
+          <div className="findUs-content">
+            <img src={require("../assets/Images/KAO_DATA_Sharepoint-annotated.jpg")} alt="How to find us map" />
+              <p>
+                Quis autem similique dolorem ut sit odit perspi ciatis.
+                Et perferendis est quia magni et sapie nte neces sitatibus.
+                Id est eius expedita quasi voluptas similique ut sit odit perspiciatis.
+                Et perferendis est quia.
+              </p>
+          </div>
+          <a href="#" className="btn">Download</a>
         </div>
-        <div>
-          <h3>Welcome to SharePoint Framework!</h3>
-          <p>
-            The SharePoint Framework (SPFx) is a extensibility model for Microsoft Viva, Microsoft Teams and SharePoint. It's the easiest way to extend Microsoft 365 with automatic Single Sign On, automatic hosting and industry standard tooling.
-          </p>
-          <h4>Learn more about SPFx development:</h4>
-          <ul className={styles.links}>
-            <li><a href="https://aka.ms/spfx" target="_blank">SharePoint Framework Overview</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-graph" target="_blank">Use Microsoft Graph in your solution</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-teams" target="_blank">Build for Microsoft Teams using SharePoint Framework</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-viva" target="_blank">Build for Microsoft Viva Connections using SharePoint Framework</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-store" target="_blank">Publish SharePoint Framework applications to the marketplace</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-api" target="_blank">SharePoint Framework API reference</a></li>
-            <li><a href="https://aka.ms/m365pnp" target="_blank">Microsoft 365 Developer Community</a></li>
-          </ul>
-        </div>
+        
       </section>
     );
   }

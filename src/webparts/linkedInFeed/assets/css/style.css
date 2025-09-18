@@ -2,7 +2,7 @@
     background-color: #fff;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-    height: 360px;
+    height: 400px;
 }
 
 .linked-header {
@@ -23,9 +23,10 @@
 }
 
 .linked-scrollbar{
-    max-height: 291px;
     overflow-y: auto;
-    padding-right: 20px;
+    padding: 4px;
+    margin-bottom: 58px;
+    max-height: 340px;
 }
 
 .linked-scrollbar::-webkit-scrollbar {
@@ -39,29 +40,27 @@
 
 .post-container {
     display: flex;
-    gap: 20px;
+    gap: 21px;
     flex-wrap: wrap;
 }
 
 .post-card {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    width: 300px;
+    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, .1);
+    width: 365px;
     overflow: hidden;
 }
 
 .post-header {
     display: flex;
     align-items: center;
-    padding: 15px;
+    padding: 15px 15px 0 15px;
     font-size: 14px;
     color: #555;
 }
 
 .post-header img.logo {
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 26px;
     margin-right: 10px;
 }
 
@@ -72,19 +71,21 @@
 }
 
 .post-title {
-    font-weight: bold;
-    padding: 0 15px;
+    font-weight: 600;
+    padding: 0 52px 3px;
     font-size: 16px;
-    margin-bottom: 10px;
 }
 
 .post-text {
     padding: 0 15px 15px;
-    font-size: 14px;
+    font-size: 13px;
     color: #333;
 }
 
 .post-image img {
-    width: 100%;
+    width: 92%;
     display: block;
+    padding: 0px 15px 15px 15px;
+    height: 150px;
+    object-fit: cover;
 }
