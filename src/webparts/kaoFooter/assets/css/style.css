@@ -1,0 +1,26 @@
+/* === Social Media Footer Styles === */
+#kaoFooter {
+    background-color: #149647;
+    /* Green background */
+    padding: 20px 0;
+}
+
+.social-bar {
+    text-align: center;
+}
+
+.social-bar a {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.social-bar img {
+    width: 25px;
+    height: 25px;
+    /* filter: brightness(0) invert(1);
+    transition: opacity 0.3s ease; */
+}
+
+/* .social-bar img:hover {
+    opacity: 0.7;
+} */

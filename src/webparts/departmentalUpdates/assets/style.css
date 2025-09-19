@@ -1,0 +1,77 @@
+.Departmental-container {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  height: 236px;
+}
+
+.Departmental-header {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 7px 11px;
+  font-size: 15px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.Departmental-Span {
+  height: 3px;
+  width: 100%;
+  display: block;
+  background-color: #4caf50;
+  margin-bottom: 20px;
+}
+
+.Departmental-scrollbar {
+  overflow-y: auto;
+  padding: 4px;
+  margin-bottom: 58px;
+  max-height: 170px;
+  padding-right: 20px;
+}
+
+.Departmental-scrollbar::-webkit-scrollbar {
+  width: 7px;
+}
+
+.Departmental-scrollbar::-webkit-scrollbar-thumb {
+  background-color: lightgray;
+  border-radius: 4px;
+}
+
+.Departmental-card {
+  display: flex;
+  align-items: flex-start;
+  max-width: 700px;
+  margin-bottom: 20px;
+}
+
+.Departmental-card img {
+  width: 176px;
+  height: 100%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.Departmental-content {
+  flex: 1;
+}
+
+.Departmental-date {
+  font-size: 11px;
+  color: black;
+  margin-bottom: 6px;
+}
+
+.Departmental-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 11px;
+  color: #222;
+}
+
+.Departmental-text {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #444;
+}

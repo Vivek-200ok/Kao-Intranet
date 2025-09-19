@@ -5,8 +5,9 @@ export interface IDepartmentalUpdatesProps {
   hasTeamsContext: boolean;
   userDisplayName: string;
   context : any;
-  propertyName: string;
-  // backgroundImage: string;
-  // source: string;
-  // filePickerResult: any;
+  Title: string;
+  backgroundImage: string;
+  dateandtime: string;
+  filePickerResult: any;
+  departmentName: string;
 }

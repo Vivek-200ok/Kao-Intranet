@@ -8,25 +8,16 @@ import {
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 import { IReadonlyTheme } from '@microsoft/sp-component-base';
 
-import * as strings from 'DepartmentalUpdatesWebPartStrings';
-import DepartmentalUpdates from './components/DepartmentalUpdates';
-import { IDepartmentalUpdatesProps } from './components/IDepartmentalUpdatesProps';
-import { sp } from "@pnp/sp/presets/all";
-import {
-  PropertyFieldFilePicker, IFilePickerResult
-} from "@pnp/spfx-property-controls/lib/PropertyFieldFilePicker";
+import * as strings from 'KaoFooterWebPartStrings';
+import KaoFooter from './components/KaoFooter';
+import { IKaoFooterProps } from './components/IKaoFooterProps';
+import { sp } from '@pnp/sp/presets/all';
 
-
-export interface IDepartmentalUpdatesWebPartProps {
-  Title: string;
-  backgroundImage: string;
+export interface IKaoFooterWebPartProps {
   description: string;
-  dateandtime: string;
-  filePickerResult: IFilePickerResult;
-  departmentName: string;
 }
 
-export default class DepartmentalUpdatesWebPart extends BaseClientSideWebPart<IDepartmentalUpdatesWebPartProps> {
+export default class KaoFooterWebPart extends BaseClientSideWebPart<IKaoFooterWebPartProps> {
 
   private _isDarkTheme: boolean = false;
   private _environmentMessage: string = '';
@@ -42,20 +33,15 @@ export default class DepartmentalUpdatesWebPart extends BaseClientSideWebPart<ID
   }
 
   public render(): void {
-    const element: React.ReactElement<IDepartmentalUpdatesProps> = React.createElement(
-      DepartmentalUpdates,
+    const element: React.ReactElement<IKaoFooterProps> = React.createElement(
+      KaoFooter,
       {
         description: this.properties.description,
         isDarkTheme: this._isDarkTheme,
         environmentMessage: this._environmentMessage,
         hasTeamsContext: !!this.context.sdks.microsoftTeams,
         userDisplayName: this.context.pageContext.user.displayName,
-        context : this.context,
-        Title: this.properties.Title,
-        backgroundImage: this.properties.filePickerResult ? this.properties.filePickerResult.fileAbsoluteUrl : null,
-        dateandtime: this.properties.dateandtime,
-        filePickerResult: this.properties.filePickerResult,
-        departmentName: this.properties.departmentName
+        context: this.context
       }
     );
 
@@ -104,36 +90,9 @@ export default class DepartmentalUpdatesWebPart extends BaseClientSideWebPart<ID
             {
               groupName: strings.BasicGroupName,
               groupFields: [
-                PropertyPaneTextField('departmentName', {
-                  label: "DepartmentName"
-                }),
-                PropertyPaneTextField('Title', {
-                  label: "Title"
-                }),
-                PropertyPaneTextField('dateandtime', {
-                  label: "Date and Time"
-                }),
                 PropertyPaneTextField('description', {
-                  label: "Description"
-                }),
-                PropertyFieldFilePicker("Department Image", {
-                  context: this.context,
-                  onPropertyChange: this.onPropertyPaneFieldChanged.bind(this),
-                  properties: this.properties,
-                  onSave: (e: IFilePickerResult) => {
-                    console.log(e);
-                    this.properties.filePickerResult = e;
-                  },
-                  onChanged: (e: IFilePickerResult) => {
-                    console.log(e);
-                    this.properties.filePickerResult = e;
-                  },
-                  buttonLabel: "Upload Image",
-                  label: "DepartMent Image",
-                  key: "FilePickerID",
-                  filePickerResult: this.properties.filePickerResult,
-                  hideLocalUploadTab: true,
-                }),
+                  label: strings.DescriptionFieldLabel
+                })
               ]
             }
           ]

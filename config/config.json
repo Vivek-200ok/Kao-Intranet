@@ -113,6 +113,14 @@
           "manifest": "./src/webparts/departmentalUpdates/DepartmentalUpdatesWebPart.manifest.json"
         }
       ]
+    },
+    "kao-footer-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/kaoFooter/KaoFooterWebPart.js",
+          "manifest": "./src/webparts/kaoFooter/KaoFooterWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
@@ -130,6 +138,8 @@
     "LinkedInFeedWebPartStrings": "lib/webparts/linkedInFeed/loc/{locale}.js",
     "FindUsWebPartStrings": "lib/webparts/findUs/loc/{locale}.js",
     "YourAssistanceProgrammeWebPartStrings": "lib/webparts/yourAssistanceProgramme/loc/{locale}.js",
-    "DepartmentalUpdatesWebPartStrings": "lib/webparts/departmentalUpdates/loc/{locale}.js"
+    "DepartmentalUpdatesWebPartStrings": "lib/webparts/departmentalUpdates/loc/{locale}.js",
+    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js",
+    "KaoFooterWebPartStrings": "lib/webparts/kaoFooter/loc/{locale}.js"
   }
 }
