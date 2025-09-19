@@ -44,4 +44,7 @@
 #CommentsWrapper {
     display: none !important;
 }
-  
+
+#spCommandBar {
+    display: none !important;
+}
